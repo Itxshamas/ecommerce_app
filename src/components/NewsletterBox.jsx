@@ -1,32 +1,35 @@
 import React from "react";
 
 const NewsletterBox = () => {
-  const onSubmitHandler = (event) =>{
+  const onSubmitHandler = (event) => {
     event.preventDefault();
+  };
 
-  }
   return (
-    <div className="text-center">
-      <p className="text-2xl font-medium text-gray-800">
+    <div className="mx-auto mt-16 max-w-3xl rounded-[32px] border border-gray-200 bg-gray-50 px-6 py-10 text-center shadow-sm">
+      <p className="text-2xl font-semibold text-gray-900">
         Subscribe now & get 20% off
       </p>
-      <p className="text-gray-400 mt-3">
+      <p className="mt-3 text-gray-500">
         Access to exclusive online discounts.
       </p>
-      <form onSubmit={onSubmitHandler} className="w-full sm:w-1/2 items-center gap-3 mx-auto my-6 border pl-3 ">
+      <form
+        onSubmit={onSubmitHandler}
+        className="mx-auto mt-8 flex flex-col gap-3 sm:flex-row sm:items-center"
+      >
         <input
-          className='w-full sm:flex-1 outline-none'
+          className="w-full rounded-full border border-gray-300 bg-white px-5 py-3 text-sm text-gray-700 outline-none transition focus:border-black focus:ring-2 focus:ring-black/10"
           type="email"
-          placeholder='Enter your email'
+          placeholder="Enter your email"
           required
         />
         <button
           type="submit"
-          className="bg-black text-white text-xs px-10 py-4"
+          className="inline-flex justify-center rounded-full bg-black px-8 py-3 text-sm font-semibold uppercase text-white transition hover:bg-gray-800"
         >
-          SUBSCRIBE
+          Subscribe
         </button>
-      </form> 
+      </form>
     </div>
   );
 };
